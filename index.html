@@ -40,21 +40,56 @@ if (annyang) {
   // These are the voice commands in quotes followed by the function
   var commands = {
   	'show all': function() { startover(); responsiveVoice.speak('showing all','UK English Male'); },
-  	'select all': function() { startover(); responsiveVoice.speak('selecting all','UK English Male'); },
-	'India Resource': function() { filterIndia(); responsiveVoice.speak('In India You have Total 22 resource, in which 19 are Permanent employee 2 are shadow employee and 1 is on contract','UK English Male'); },
-    	'UK Resource': function() { filterUK(); responsiveVoice.speak('In United Kingdom, You have Total 2 resource, in which both 2 are Permanent employee','UK English Male'); },
-    	'USA Resource': function() { filterUSA(); responsiveVoice.speak('In United State of America, You have Total 20 resource, in which 15 are Permanent employee and 5 are on contract','UK English Male'); },
+  	
+    'select all': function() { startover(); responsiveVoice.speak('selecting all','UK English Male'); },
+	
+    'India Resource': function() { filterIndia(); responsiveVoice.speak('In India You have Total 22 resource, in which 19 are Permanent employee 2 are shadow employee and 1 is on contract','UK English Male'); },
+    
+    'UK Resource': function() { filterUK(); responsiveVoice.speak('In United Kingdom, You have Total 2 resource, in which both 2 are Permanent employee','UK English Male'); },
+    
+    'USA Resource': function() { filterUSA(); responsiveVoice.speak('In United State of America, You have Total 20 resource, in which 15 are Permanent employee and 5 are on contract','UK English Male'); },
+    
     'Total Resource': function() { filterTR(); responsiveVoice.speak('Globally You have Total 39 resource, in which 31 are  permanent employee, 6 are on contract and 2 are shadow employee','UK English Male'); },    
-   'First Highlight': function() { filterH1(); responsiveVoice.speak('Your First Highlight point is, Completed deployment of HRA to Production. XYZ Sr. Manager sent praises,  appreciating ABC.ABC,ABC and Offshore Development plus SQA teams from ABC. He said he can vouch for this team who have always come for rescue and have embraced challenges and delivered on time','UK English Male'); },
+   
+    'First Highlight': function() { filterH1(); responsiveVoice.speak('Your First Highlight point is, Completed deployment of HRA to Production. XYZ Sr. Manager sent praises,  appreciating ABC.ABC,ABC and Offshore Development plus SQA teams from ABC. He said he can vouch for this team who have always come for rescue and have embraced challenges and delivered on time','UK English Male'); },
+    
     'Second Highlight': function() { filterH2(); responsiveVoice.speak('Your Second Highlight point is, Knowledge Transition Sessions for Sales, Marketing completed as planned for Analytics Factory','UK English Male'); },
+    
     'Third Highlight': function() { filterH3(); responsiveVoice.speak('Your Third Highlight poin is, Similar to HRA 0, we deployed SDH(Sales Data Hub) to Production and received similar appreciations from the XYZ Managers','UK English Male'); },
-	   'First Low light': function() { filterL1(); responsiveVoice.speak('Your First Lowlight point is, Signifcant delay in finding an experienced BO resource at Offshore. Longer relieving periods & recent immigration challenges adding up to the delay','UK English Male'); },
+	  
+    'First Low light': function() { filterL1(); responsiveVoice.speak('Your First Lowlight point is, Signifcant delay in finding an experienced BO resource at Offshore. Longer relieving periods & recent immigration challenges adding up to the delay','UK English Male'); },
+    
     'Second Low light': function() { filterL2(); responsiveVoice.speak('Your Second Lowlight point is, Longer relieving period in India for resources delayed onboarding the Offshore Architect and she is joining the team for Jan 2018','UK English Male'); },
-     'Third Low light': function() { filterL3(); responsiveVoice.speak('Currently You do not have any Third Lowlight','UK English Male'); },
-   'export': function() { exportPDF(); responsiveVoice.speak('exporting','UK English Male'); },
-	'start over': function() { startover(); responsiveVoice.speak('starting over','UK English Male'); },
-	'remove filter': function() { removeFilter(); responsiveVoice.speak('removing filter','UK English Male'); },
-	'remove filters': function() { removeFilter(); responsiveVoice.speak('removing filters','UK English Male'); } 
+    
+    'Third Low light': function() { filterL3(); responsiveVoice.speak('Currently You do not have any Third Lowlight','UK English Male'); },
+    
+    'First Key Ask': function() { filterKA1(); responsiveVoice.speak('Your First Key Asks point is, "Enhancements requests received are maintained at three different locations in xls sheet the 3 solutions. All the three xls  sheets are having different set of columns. Can a single format be defined & followed so that it is consistent and reporting is easier OR is it possible to enable enhancement requests also as part of REMEDY?','UK English Male'); },    
+   
+        'Second Key Ask': function() { filterKA2(); responsiveVoice.speak('Your Second Key Asks point is, SalesETL has Adhoc release cycle. Our Ask is to Align to Quarterly release cycle like the Sales Microstrategy. Depending on need & criticality, one Adhoc release if required in between can be done.','UK English Male'); },  
+        
+        'Third Key Ask': function() { filterKA3(); responsiveVoice.speak('Your Third Key Asks point is, For the Finance Solution - ITSM/REMEDY are used for the CRs.Can we consolidate to one tool, that would help improve the existing process and all data can be found at one place.','UK English Male'); },  
+    
+        'Fourth Key Ask': function() { filterKA4(); responsiveVoice.speak('Your fouth Key Asks point is, Request for allowing offshore team to use Laptops so that offshore team can support during off-hour.','UK English Male'); },  
+    
+     'First Road Ahead': function() { filterRA1(); responsiveVoice.speak('Your First Road Ahead point is, "No release planned for April for Marketing Solution as the IT team is doing an upgrade of Business Objects and Informatica environments. Both April & May release would be done in May.','UK English Male'); }, 
+        
+    'Second Road Ahead': function() { filterRA2(); responsiveVoice.speak('Your Second Road Ahead point is, "Sales EMEA Knowledge Transfer including the new ODS requirement would result in pushing the timeline to April.','UK English Male'); },
+    
+    'Third Road Ahead': function() { filterRA3(); responsiveVoice.speak('Your Third Road Ahead point is, HRA Phase 2 statement of work in progress.','UK English Male'); },
+    
+     'Fourth Road Ahead': function() { filterRA4(); responsiveVoice.speak('Your Fourth Road Ahead point is, SDH Support statement of work in progress.','UK English Male'); },
+    
+    'First Value Add': function() { filterVA1(); responsiveVoice.speak('Your First Value Adds log is, Under the Sales Solution, Identified an existing bug in the system during development of a CR for March 2017. This Value add is created on 01 March 2017 and Implemented on 18 March 2017. Yes this is implemented and Time required to solve 1 or 2 P2/P3 tickets is Expected Savings. Gain or Loss is Zero ','UK English Male'); },
+    
+     'Second Value Add': function() { filterVA2(); responsiveVoice.speak('Your Second Value Adds log is, 1/2 day session for XYZ team at ABC to showcase about ROI, CRM etc. This Value add is created on 28 March 2017. No this is not yet implemented. Gain or Loss is Zero ','UK English Male'); },
+    
+    'export': function() { exportPDF(); responsiveVoice.speak('exporting','UK English Male'); },
+	
+    'start over': function() { startover(); responsiveVoice.speak('starting over','UK English Male'); },
+	
+    'remove filter': function() { removeFilter(); responsiveVoice.speak('removing filter','UK English Male'); },
+	
+    'remove filters': function() { removeFilter(); responsiveVoice.speak('removing filters','UK English Male'); } 
  };
   
   // Add commands to annyang
@@ -74,7 +109,7 @@ var placeholderDiv = document.getElementById("tableauViz");
 
 var url = "https://public.tableau.com/views/MORDashboardwithVoice/MainDashboard?:embed=y&:display_count=yes&:tabs=yes:showVizHome=no";
 var options = {
-   width: "1060px",   
+   width: "1004px",   
    height: "869px",
    hideTabs: false,
    hideToolbar: true,
@@ -139,11 +174,64 @@ activeSheet.getWorksheets()[0].applyFilterAsync('Sr No.', '3', tableauSoftware.F
 activeSheet.getWorksheets()[0].applyFilterAsync('Sr No.', '1', tableauSoftware.FilterUpdateType.REPLACE); 
 }
   
-  function filterL2()
+    function filterL2()
 {
 activeSheet.getWorksheets()[0].applyFilterAsync('Sr No.', '2', tableauSoftware.FilterUpdateType.REPLACE); 
 }
   
+    function filterL3()
+{
+activeSheet.getWorksheets()[0].applyFilterAsync('Sr No.', '3', tableauSoftware.FilterUpdateType.REPLACE); 
+}
+  
+      function filterKA1()
+{
+activeSheet.getWorksheets()[0].applyFilterAsync('S.No', '1', tableauSoftware.FilterUpdateType.REPLACE); 
+}
+
+        function filterKA2()
+{
+activeSheet.getWorksheets()[0].applyFilterAsync('S.No', '2', tableauSoftware.FilterUpdateType.REPLACE); 
+}
+  
+        function filterKA3()
+{
+activeSheet.getWorksheets()[0].applyFilterAsync('S.No', '3', tableauSoftware.FilterUpdateType.REPLACE); 
+}
+  
+   function filterKA4()
+{
+activeSheet.getWorksheets()[0].applyFilterAsync('S.No', '4', tableauSoftware.FilterUpdateType.REPLACE); 
+}
+  
+   function filterRA1()
+{
+activeSheet.getWorksheets()[0].applyFilterAsync('S.No', '1', tableauSoftware.FilterUpdateType.REPLACE); 
+}
+   function filterRA2()
+{
+activeSheet.getWorksheets()[0].applyFilterAsync('S.No', '2', tableauSoftware.FilterUpdateType.REPLACE); 
+}
+ 
+  function filterRA3()
+{
+activeSheet.getWorksheets()[0].applyFilterAsync('S.No', '3', tableauSoftware.FilterUpdateType.REPLACE); 
+}
+ 
+  function filterRA4()
+{
+activeSheet.getWorksheets()[0].applyFilterAsync('S.No', '4', tableauSoftware.FilterUpdateType.REPLACE); 
+}
+  
+    function filterVA1()
+{
+activeSheet.getWorksheets()[0].applyFilterAsync('No.', '1', tableauSoftware.FilterUpdateType.REPLACE); 
+}
+  
+    function filterVA2()
+{
+activeSheet.getWorksheets()[0].applyFilterAsync('No.', '2', tableauSoftware.FilterUpdateType.REPLACE); 
+}
   
  // function selectIndia()
 //	{
